@@ -1,0 +1,22 @@
+ion-card{
+    top: 50%;
+    left: 47.5%;
+    cursor: pointer;
+    width: 350px;
+    height: 350px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ion-button{
+    width: 7.9rem;
+    height: 1.5rem;
+    margin-top: 1.2rem;
+}
+
+#title{
+    margin-top: 1rem;
+}

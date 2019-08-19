@@ -1,0 +1,113 @@
+ion-spinner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+.card{
+    top: 35%;
+    left: 46.88%;
+    cursor: pointer;
+    width: 350px;
+    height: 350px;
+    transition: transform .2s linear;
+    transform: translate(-50%,-50%);
+
+}
+@media(max-width: 400px){
+    .card{
+     left: 45.75%;
+    }
+ }
+
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.front, .back{
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ backface-visibility: hidden;
+ position: absolute;
+ transition: transform .2s linear;
+}
+
+.front{
+    transform:  perspective(600px) rotateY(0deg);
+}
+
+// ion-button{
+//     position: absolute;
+//     z-index: 100;
+// }
+
+.frontCard{
+    animation-name: example;
+    animation-duration: .5s;
+    transform: translate(-50%,-50%);
+
+}
+
+.backCard{
+    animation-name: example;
+    animation-duration: .5s;
+    transform: translate(-50%,-50%);
+
+}
+
+@keyframes example {
+    0% {transform: translate(0, 0)}
+    50% {  transform:  perspective(600px) rotateY(-180deg);
+    }
+    100%{
+        transform: translate(-50%,-50%);
+
+    }
+  }
+.back{
+    transform:  perspective(600px) rotateY(180deg);
+    background: #7044ff;
+}
+
+#hiragana{
+    font-size: 7rem;
+}
+
+
+
+.frontFlip{
+    transform:  perspective(600px) rotateY(-180deg);
+}
+.backFlip{
+    transform:  perspective(600px) rotateY(0deg);
+}
+// .card:hover > .back {
+//     transform:  perspective(600px) rotateY(0deg);
+// }
+
+ion-icon{
+    font-size: 2.5rem;
+}
+
+#vocabulary, #translation {
+    font-size: 1.2rem;
+}
+
+#romaji{
+    font-size: 3rem;
+}
+
+#hint{
+    font-size: .8rem;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "hiragana-app-second",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

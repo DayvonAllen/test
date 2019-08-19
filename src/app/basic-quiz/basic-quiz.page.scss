@@ -1,0 +1,36 @@
+.item{
+  width: 100vw;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+ion-button{
+  margin-left: 13.5%;
+  width: 9.5rem;
+
+}
+
+#title{
+  font-size: 1.4rem;
+}
+
+
+@media(max-width: 325px){
+  ion-button{
+      margin-left: 9.5%;
+      width: 6.5rem;
+  }
+}
+
+// .img{
+//     width: 40px;
+// }
+
+// #but1{
+//     width: 75% !important;
+// }
+// .btn-group{
+//     display: grid;
+//     grid-template-columns: 1fr 2fr;
+// }
