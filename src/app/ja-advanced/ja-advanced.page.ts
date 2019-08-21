@@ -31,7 +31,7 @@ export class JaAdvancedPage implements OnInit {
   }
   playSound(){
     this.front = null;
-    this.snd = new Audio(`https://hiragana-api.herokuapp.com/sounds/${this.list[0]['romanji']}`)
+    this.snd = new Audio(`../../assets/${this.list[0]['romanji']}.mp3`)    
     this.snd.play()
   }
 

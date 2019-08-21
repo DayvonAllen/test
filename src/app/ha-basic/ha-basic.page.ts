@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { Component, OnInit } from "@angular/core";
+import { DataService } from "../data.service";
 
 @Component({
-  selector: 'app-ha-basic',
-  templateUrl: './ha-basic.page.html',
-  styleUrls: ['./ha-basic.page.scss'],
+  selector: "app-ha-basic",
+  templateUrl: "./ha-basic.page.html",
+  styleUrls: ["./ha-basic.page.scss"]
 })
 export class HaBasicPage implements OnInit {
-
   front = false;
   snd;
   characters;
@@ -28,21 +27,20 @@ export class HaBasicPage implements OnInit {
   flip() {
     this.front = !this.front;
   }
-  playSound(){
+  playSound() {
     this.front = null;
-    this.snd = new Audio(`https://hiragana-api.herokuapp.com/sounds/${this.list[0]['romanji']}`)
-    this.snd.play()
+    this.snd = new Audio(
+      `../../assets/${this.list[0]["romanji"]}(hiragana).mp3`
+    );
+    this.snd.play();
   }
 
-  next(){
-      this.counter++;
-      this.list = [this.a[this.counter]];
+  next() {
+    this.counter++;
+    this.list = [this.a[this.counter]];
   }
-  back(){
-      this.counter--;
-      this.list = [this.a[this.counter]];
+  back() {
+    this.counter--;
+    this.list = [this.a[this.counter]];
   }
-
-
-
 }
