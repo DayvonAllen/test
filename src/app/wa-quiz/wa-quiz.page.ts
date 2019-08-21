@@ -29,7 +29,7 @@ export class WaQuizPage implements OnInit {
 
   ngOnInit() {
     this.getData.getAllData().subscribe(data => {
-      this.characters = data["characters"];
+      this.characters = data;
       this.a = this.characters.slice(43, 46);
       this.list = [this.a[0]];
       this.loaded = true;

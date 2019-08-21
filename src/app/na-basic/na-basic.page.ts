@@ -19,7 +19,7 @@ export class NaBasicPage implements OnInit {
 
   ngOnInit() {
     this.getData.getAllData().subscribe(data => {
-      this.characters = data["characters"];
+      this.characters = data;
       this.a = this.characters.slice(20, 25);
       this.list = [this.a[0]];
       this.loaded = true;

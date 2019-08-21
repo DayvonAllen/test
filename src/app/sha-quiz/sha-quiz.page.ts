@@ -27,7 +27,7 @@ export class ShaQuizPage implements OnInit {
 
   ngOnInit() {
     this.getData.getAllData().subscribe(data => {
-      this.characters = data["characters"];
+      this.characters = data;
       this.a = this.characters.slice(74, 77);
       this.list = [this.a[0]];
       this.loaded = true;
